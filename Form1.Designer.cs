@@ -30,6 +30,7 @@
         {
             btnTest = new Button();
             txtBoxCoord = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnTest
@@ -49,11 +50,22 @@
             txtBoxCoord.Size = new Size(75, 23);
             txtBoxCoord.TabIndex = 1;
             // 
+            // button1
+            // 
+            button1.Location = new Point(641, 138);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 2;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(txtBoxCoord);
             Controls.Add(btnTest);
             Name = "Form1";
@@ -66,5 +78,6 @@
 
         private Button btnTest;
         private TextBox txtBoxCoord;
+        private Button button1;
     }
 }

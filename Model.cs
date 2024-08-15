@@ -58,6 +58,9 @@ namespace WF_Lessons_23_24
         // Поле статуса ранения
         public bool WoundedStatus;
 
+        // Поле статуса первого выстрела
+        bool FirstShort;
+
         // Поле координат последнего выстрела
         public string? LastShotCoord;
 
@@ -98,7 +101,15 @@ namespace WF_Lessons_23_24
                 if ((x != 9 && PlayerShips[x + 1, y] == CoordStatus.Ship) ||
                     (y != 9 && PlayerShips[x, y + 1] == CoordStatus.Ship) ||
                     (x != 0 && PlayerShips[x - 1, y] == CoordStatus.Ship) ||
-                    (y != 0 && PlayerShips[x, y - 1] == CoordStatus.Ship))
+                    (y != 0 && PlayerShips[x, y - 1] == CoordStatus.Ship) ||
+                    (x < 8 && PlayerShips[x + 2, y] == CoordStatus.Ship) ||
+                    (y < 8 && PlayerShips[x, y + 2] == CoordStatus.Ship) ||
+                    (x > 1 && PlayerShips[x - 2, y] == CoordStatus.Ship) ||
+                    (y > 1 && PlayerShips[x, y - 2] == CoordStatus.Ship) ||
+                    (x < 7 && PlayerShips[x + 3, y] == CoordStatus.Ship) ||
+                    (y < 7 && PlayerShips[x, y + 3] == CoordStatus.Ship) ||
+                    (x > 2 && PlayerShips[x - 3, y] == CoordStatus.Ship) ||
+                    (y > 2 && PlayerShips[x, y - 3] == CoordStatus.Ship))
                 {
                     result = ShotStatus.Wounded;
                 }
@@ -119,8 +130,7 @@ namespace WF_Lessons_23_24
         // Метод выстрела компьютера (генерация случайных координат)
         public string ShotGen()
         {
-            string result = "00";
-
+            
             int x, y; // координаты выстрела в цифровом виде
 
             Random rand = new Random();
@@ -137,20 +147,64 @@ namespace WF_Lessons_23_24
                 y = int.Parse(LastShotCoord.Substring(1));
                 if (LastShot == ShotStatus.Wounded)
                 {
-                    
-                    if (x != 9 && EnemyShips[x + 1, y] == CoordStatus.Got) x = x - 1;
-                    if (y != 9 && EnemyShips[x, y + 1] == CoordStatus.Got) y = y - 1;
-                    if (x != 0 && EnemyShips[x - 1, y] == CoordStatus.Got) x = x + 1;
-                    if (y != 0 && EnemyShips[x, y - 1] == CoordStatus.Got) y = y + 1;
-                    {
+                    FirstShort = true;
 
+                    if (x != 9 && EnemyShips[x + 1, y] == CoordStatus.Got)
+                    { x = x - 1; FirstShort = false; }
+                    if (y != 9 && EnemyShips[x, y + 1] == CoordStatus.Got)
+                    { y = y - 1; FirstShort = false; }
+                    if (x != 0 && EnemyShips[x - 1, y] == CoordStatus.Got)
+                    { x = x + 1;  FirstShort = false; }
+                    if (y != 0 && EnemyShips[x, y - 1] == CoordStatus.Got)
+                    { y = y + 1; FirstShort = false; }
+
+
+                    if(FirstShort)
+                    {
+                        int q = rand.Next(1, 4);
+                        switch(q)
+                        {
+                            case 1:
+                                x = x + 1;
+                                break;
+                            case 2:
+                                x = x - 1;
+                                break;
+                            case 3:
+                                y = y + 1;
+                                break;
+                            case 4:
+                                y = y - 1;
+                                break;
+                        }
                     }
+                } 
+                if(LastShot == ShotStatus.Miss && WoundedStatus)
+                {
+                    if(x < 8 && EnemyShips[x+2,y] == CoordStatus.Got) x = x + 3;
+                    if(y < 8 && EnemyShips[x,y+2] == CoordStatus.Got) y = y + 3;
+                    if (x > 1 && EnemyShips[x - 2, y] == CoordStatus.Got) x = x - 3;
+                    if( y > 1 && EnemyShips[x,y-2] == CoordStatus.Got)y = y - 3;
+
+                    if (x < 7 && EnemyShips[x + 3, y] == CoordStatus.Got) x = x + 4;
+                    if (y < 7 && EnemyShips[x, y + 3] == CoordStatus.Got) y = y + 4;
+                    if (x > 2 && EnemyShips[x - 3, y] == CoordStatus.Got) x = x - 4;
+                    if (y > 2 && EnemyShips[x, y - 3] == CoordStatus.Got) y = y - 4;
+
+                    if (x < 9 && EnemyShips[x + 1, y] == CoordStatus.Got) x = x + 2;
+                    if (y < 9 && EnemyShips[x, y + 1] == CoordStatus.Got) y = y + 2;
+                    if (x > 0 && EnemyShips[x - 1, y] == CoordStatus.Got) x = x - 2;
+                    if (y > 0 && EnemyShips[x, y - 1] == CoordStatus.Got) y = y - 2;
                 }
+
             }
 
+            /*if (EnemyShips[x, y] != CoordStatus.None)
+            {
+                ShotGen();
+            }*/
 
-
-
+            string result;
 
             result = x.ToString() + y.ToString();
 
