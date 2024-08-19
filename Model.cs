@@ -182,18 +182,29 @@ namespace WF_Lessons_23_24
                 if(LastShot == ShotStatus.Miss && WoundedStatus)
                 {
                     if(x < 8 && EnemyShips[x+2,y] == CoordStatus.Got) x = x + 3;
+                    else
                     if(y < 8 && EnemyShips[x,y+2] == CoordStatus.Got) y = y + 3;
+                    else
                     if (x > 1 && EnemyShips[x - 2, y] == CoordStatus.Got) x = x - 3;
+                    else
                     if( y > 1 && EnemyShips[x,y-2] == CoordStatus.Got)y = y - 3;
+                    else
 
                     if (x < 7 && EnemyShips[x + 3, y] == CoordStatus.Got) x = x + 4;
+                    else
                     if (y < 7 && EnemyShips[x, y + 3] == CoordStatus.Got) y = y + 4;
+                    else
                     if (x > 2 && EnemyShips[x - 3, y] == CoordStatus.Got) x = x - 4;
+                    else
                     if (y > 2 && EnemyShips[x, y - 3] == CoordStatus.Got) y = y - 4;
+                    else
 
                     if (x < 9 && EnemyShips[x + 1, y] == CoordStatus.Got) x = x + 2;
+                    else
                     if (y < 9 && EnemyShips[x, y + 1] == CoordStatus.Got) y = y + 2;
+                    else
                     if (x > 0 && EnemyShips[x - 1, y] == CoordStatus.Got) x = x - 2;
+                    else
                     if (y > 0 && EnemyShips[x, y - 1] == CoordStatus.Got) y = y - 2;
                 }
 
