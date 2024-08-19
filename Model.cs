@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -71,12 +73,12 @@ namespace WF_Lessons_23_24
             LastShot = ShotStatus.Miss;
             WoundedStatus = false;
 
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
-                for(int j = 0; j < 10; j++)
+                for (int j = 0; j < 10; j++)
                 {
                     PlayerShips[i, j] = CoordStatus.None;
-                    EnemyShips[i,j] = CoordStatus.None;
+                    EnemyShips[i, j] = CoordStatus.None;
                 }
             }
         }
@@ -115,7 +117,7 @@ namespace WF_Lessons_23_24
                 }
                 PlayerShips[x, y] = CoordStatus.Got;
                 UndiscoverCells--;
-                if(UndiscoverCells == 0)
+                if (UndiscoverCells == 0)
                 {
                     result = ShotStatus.EndBattle;
                 }
@@ -130,12 +132,12 @@ namespace WF_Lessons_23_24
         // Метод выстрела компьютера (генерация случайных координат)
         public string ShotGen()
         {
-            
+
             int x, y; // координаты выстрела в цифровом виде
 
             Random rand = new Random();
 
-            if(LastShot == ShotStatus.Kill) WoundedStatus = false;
+            if (LastShot == ShotStatus.Kill) WoundedStatus = false;
 
             if ((LastShot == ShotStatus.Kill || LastShot == ShotStatus.Miss) && !WoundedStatus)
             {
@@ -154,15 +156,15 @@ namespace WF_Lessons_23_24
                     if (y != 9 && EnemyShips[x, y + 1] == CoordStatus.Got)
                     { y = y - 1; FirstShort = false; }
                     if (x != 0 && EnemyShips[x - 1, y] == CoordStatus.Got)
-                    { x = x + 1;  FirstShort = false; }
+                    { x = x + 1; FirstShort = false; }
                     if (y != 0 && EnemyShips[x, y - 1] == CoordStatus.Got)
                     { y = y + 1; FirstShort = false; }
 
 
-                    if(FirstShort)
+                    if (FirstShort)
                     {
                         int q = rand.Next(1, 4);
-                        switch(q)
+                        switch (q)
                         {
                             case 1:
                                 x = x + 1;
@@ -178,16 +180,16 @@ namespace WF_Lessons_23_24
                                 break;
                         }
                     }
-                } 
-                if(LastShot == ShotStatus.Miss && WoundedStatus)
+                }
+                if (LastShot == ShotStatus.Miss && WoundedStatus)
                 {
-                    if(x < 8 && EnemyShips[x+2,y] == CoordStatus.Got) x = x + 3;
+                    if (x < 8 && EnemyShips[x + 2, y] == CoordStatus.Got) x = x + 3;
                     else
-                    if(y < 8 && EnemyShips[x,y+2] == CoordStatus.Got) y = y + 3;
+                    if (y < 8 && EnemyShips[x, y + 2] == CoordStatus.Got) y = y + 3;
                     else
                     if (x > 1 && EnemyShips[x - 2, y] == CoordStatus.Got) x = x - 3;
                     else
-                    if( y > 1 && EnemyShips[x,y-2] == CoordStatus.Got)y = y - 3;
+                    if (y > 1 && EnemyShips[x, y - 2] == CoordStatus.Got) y = y - 3;
                     else
 
                     if (x < 7 && EnemyShips[x + 3, y] == CoordStatus.Got) x = x + 4;
@@ -222,6 +224,98 @@ namespace WF_Lessons_23_24
             return result;
 
         }
+
+        public bool CheckCoord(string xy, ShipType type, Direction direction = Direction.Vertical)
+        {
+            bool result = true;
+
+
+
+            return result;
+        }
+
+
+        // Добавляет или удаляет корабль
+        // xy - координаты корабля, type - тип корабля, direction - направление размещения корабля, deleting - удалять или добалять корабль
+        // В случае успешной операции возвращает true.
+        public bool AddDelShip(string xy, ShipType type, Direction direction = Direction.Vertical, bool deleting = false)
+        {
+            bool result = true;
+
+            if (deleting || CheckCoord(xy, type, direction))
+            {
+                int x = int.Parse(xy.Substring(0, 1));
+                int y = int.Parse(xy.Substring(1));
+
+                CoordStatus status = new CoordStatus();
+
+                if (deleting)
+                {
+                    status = CoordStatus.None;
+                } else
+                {
+                    status = CoordStatus.Ship;
+                }
+
+                PlayerShips[x, y] = status;
+
+                if(direction == Direction.Vertical)
+                {
+                    switch (type)
+                    {
+                        case ShipType.x2:
+                            PlayerShips[x, y + 1] = status;
+                            break;
+                        case ShipType.x3:
+                            PlayerShips[x, y + 1] = status;
+                            PlayerShips[x, y + 2] = status;
+                            break;
+                        case ShipType.x4:
+                            PlayerShips[x, y + 1] = status;
+                            PlayerShips[x, y + 2] = status;
+                            PlayerShips[x, y + 3] = status;
+                            break;
+                    }
+                } else
+                {
+                    switch (type)
+                    {
+                        case ShipType.x2:
+                            PlayerShips[x + 1, y] = status;
+                            break;
+                        case ShipType.x3:
+                            PlayerShips[x + 1, y] = status;
+                            PlayerShips[x + 2, y] = status;
+                            break;
+                        case ShipType.x4:
+                            PlayerShips[x + 1, y] = status;
+                            PlayerShips[x + 2, y] = status;
+                            PlayerShips[x + 3, y] = status;
+                            break;
+                    }
+                }
+
+            } else
+            {
+                result = false;
+            }
+
+            return result;
+        }
+
+        // Удаляет все корабли с поля
+        public void DelShips()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                for(int j = 0; j < 10; j++)
+                {
+                    PlayerShips[i, j] = CoordStatus.None;
+                }
+            }
+        }
+
+        
 
     }
 }
