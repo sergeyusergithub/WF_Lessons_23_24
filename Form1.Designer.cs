@@ -28,6 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             btnTest = new Button();
             txtBoxCoord = new TextBox();
             button1 = new Button();
@@ -140,12 +150,24 @@
             radioButton3 = new RadioButton();
             radioButton4 = new RadioButton();
             button103 = new Button();
+            dGVEnemyShips = new DataGridView();
+            А = new DataGridViewTextBoxColumn();
+            Б = new DataGridViewTextBoxColumn();
+            В = new DataGridViewTextBoxColumn();
+            Г = new DataGridViewTextBoxColumn();
+            Д = new DataGridViewTextBoxColumn();
+            Е = new DataGridViewTextBoxColumn();
+            Ж = new DataGridViewTextBoxColumn();
+            З = new DataGridViewTextBoxColumn();
+            И = new DataGridViewTextBoxColumn();
+            К = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dGVEnemyShips).BeginInit();
             SuspendLayout();
             // 
             // btnTest
             // 
-            btnTest.Location = new Point(641, 34);
+            btnTest.Location = new Point(776, 31);
             btnTest.Name = "btnTest";
             btnTest.Size = new Size(75, 23);
             btnTest.TabIndex = 0;
@@ -155,14 +177,14 @@
             // 
             // txtBoxCoord
             // 
-            txtBoxCoord.Location = new Point(641, 82);
+            txtBoxCoord.Location = new Point(776, 79);
             txtBoxCoord.Name = "txtBoxCoord";
             txtBoxCoord.Size = new Size(75, 23);
             txtBoxCoord.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(641, 138);
+            button1.Location = new Point(776, 135);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 2;
@@ -1281,7 +1303,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(361, 67);
+            checkBox1.Location = new Point(302, 11);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(52, 19);
             checkBox1.TabIndex = 5;
@@ -1291,16 +1313,17 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(361, 103);
+            checkBox2.Location = new Point(302, 34);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(70, 19);
             checkBox2.TabIndex = 6;
             checkBox2.Text = "Удалить";
             checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // button102
             // 
-            button102.Location = new Point(641, 312);
+            button102.Location = new Point(776, 309);
             button102.Name = "button102";
             button102.Size = new Size(111, 23);
             button102.TabIndex = 7;
@@ -1312,7 +1335,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Checked = true;
-            radioButton1.Location = new Point(361, 150);
+            radioButton1.Location = new Point(302, 94);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(37, 19);
             radioButton1.TabIndex = 8;
@@ -1323,7 +1346,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(361, 175);
+            radioButton2.Location = new Point(302, 119);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(37, 19);
             radioButton2.TabIndex = 9;
@@ -1333,7 +1356,7 @@
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(361, 200);
+            radioButton3.Location = new Point(302, 144);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(37, 19);
             radioButton3.TabIndex = 10;
@@ -1343,7 +1366,7 @@
             // radioButton4
             // 
             radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(361, 225);
+            radioButton4.Location = new Point(302, 169);
             radioButton4.Name = "radioButton4";
             radioButton4.Size = new Size(37, 19);
             radioButton4.TabIndex = 11;
@@ -1352,7 +1375,7 @@
             // 
             // button103
             // 
-            button103.Location = new Point(641, 283);
+            button103.Location = new Point(776, 280);
             button103.Name = "button103";
             button103.Size = new Size(111, 23);
             button103.TabIndex = 12;
@@ -1360,11 +1383,131 @@
             button103.UseVisualStyleBackColor = true;
             button103.Click += button103_Click;
             // 
+            // dGVEnemyShips
+            // 
+            dGVEnemyShips.AllowUserToAddRows = false;
+            dGVEnemyShips.AllowUserToDeleteRows = false;
+            dGVEnemyShips.BackgroundColor = SystemColors.Control;
+            dGVEnemyShips.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGVEnemyShips.Columns.AddRange(new DataGridViewColumn[] { А, Б, В, Г, Д, Е, Ж, З, И, К });
+            dGVEnemyShips.Location = new Point(378, 15);
+            dGVEnemyShips.Margin = new Padding(0);
+            dGVEnemyShips.Name = "dGVEnemyShips";
+            dGVEnemyShips.ReadOnly = true;
+            dGVEnemyShips.RowHeadersWidth = 25;
+            dGVEnemyShips.RowTemplate.Height = 25;
+            dGVEnemyShips.ScrollBars = ScrollBars.None;
+            dGVEnemyShips.Size = new Size(275, 275);
+            dGVEnemyShips.TabIndex = 13;
+            dGVEnemyShips.CellClick += dGVEnemyShips_CellClick;
+            dGVEnemyShips.SelectionChanged += dGVEnemyShips_SelectionChanged;
+            // 
+            // А
+            // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            А.DefaultCellStyle = dataGridViewCellStyle1;
+            А.HeaderText = "А";
+            А.Name = "А";
+            А.ReadOnly = true;
+            А.Resizable = DataGridViewTriState.False;
+            А.Width = 25;
+            // 
+            // Б
+            // 
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Б.DefaultCellStyle = dataGridViewCellStyle2;
+            Б.HeaderText = "Б";
+            Б.Name = "Б";
+            Б.ReadOnly = true;
+            Б.Resizable = DataGridViewTriState.False;
+            Б.Width = 25;
+            // 
+            // В
+            // 
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            В.DefaultCellStyle = dataGridViewCellStyle3;
+            В.HeaderText = "В";
+            В.Name = "В";
+            В.ReadOnly = true;
+            В.Resizable = DataGridViewTriState.False;
+            В.Width = 25;
+            // 
+            // Г
+            // 
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Г.DefaultCellStyle = dataGridViewCellStyle4;
+            Г.HeaderText = "Г";
+            Г.Name = "Г";
+            Г.ReadOnly = true;
+            Г.Resizable = DataGridViewTriState.False;
+            Г.Width = 25;
+            // 
+            // Д
+            // 
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Д.DefaultCellStyle = dataGridViewCellStyle5;
+            Д.HeaderText = "Д";
+            Д.Name = "Д";
+            Д.ReadOnly = true;
+            Д.Resizable = DataGridViewTriState.False;
+            Д.Width = 25;
+            // 
+            // Е
+            // 
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Е.DefaultCellStyle = dataGridViewCellStyle6;
+            Е.HeaderText = "Е";
+            Е.Name = "Е";
+            Е.ReadOnly = true;
+            Е.Resizable = DataGridViewTriState.False;
+            Е.Width = 25;
+            // 
+            // Ж
+            // 
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Ж.DefaultCellStyle = dataGridViewCellStyle7;
+            Ж.HeaderText = "Ж";
+            Ж.Name = "Ж";
+            Ж.ReadOnly = true;
+            Ж.Resizable = DataGridViewTriState.False;
+            Ж.Width = 25;
+            // 
+            // З
+            // 
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            З.DefaultCellStyle = dataGridViewCellStyle8;
+            З.HeaderText = "З";
+            З.Name = "З";
+            З.ReadOnly = true;
+            З.Resizable = DataGridViewTriState.False;
+            З.Width = 25;
+            // 
+            // И
+            // 
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            И.DefaultCellStyle = dataGridViewCellStyle9;
+            И.HeaderText = "И";
+            И.Name = "И";
+            И.ReadOnly = true;
+            И.Resizable = DataGridViewTriState.False;
+            И.Width = 25;
+            // 
+            // К
+            // 
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            К.DefaultCellStyle = dataGridViewCellStyle10;
+            К.HeaderText = "К";
+            К.Name = "К";
+            К.ReadOnly = true;
+            К.Resizable = DataGridViewTriState.False;
+            К.Width = 25;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(918, 450);
+            Controls.Add(dGVEnemyShips);
             Controls.Add(button103);
             Controls.Add(radioButton4);
             Controls.Add(radioButton3);
@@ -1380,6 +1523,7 @@
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dGVEnemyShips).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1498,5 +1642,16 @@
         private RadioButton radioButton3;
         private RadioButton radioButton4;
         private Button button103;
+        private DataGridView dGVEnemyShips;
+        private DataGridViewTextBoxColumn А;
+        private DataGridViewTextBoxColumn Б;
+        private DataGridViewTextBoxColumn В;
+        private DataGridViewTextBoxColumn Г;
+        private DataGridViewTextBoxColumn Д;
+        private DataGridViewTextBoxColumn Е;
+        private DataGridViewTextBoxColumn Ж;
+        private DataGridViewTextBoxColumn З;
+        private DataGridViewTextBoxColumn И;
+        private DataGridViewTextBoxColumn К;
     }
 }

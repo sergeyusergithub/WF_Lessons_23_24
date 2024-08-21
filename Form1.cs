@@ -12,9 +12,26 @@ namespace WF_Lessons_23_24
             model.PlayerShips[5, 4] = CoordStatus.Ship;
 
             model.PlayerShips[7, 3] = CoordStatus.Ship;
+
+            for (int i = 0; i < 10; i++)
+            {
+                dGVEnemyShips.Rows.Add(row);
+                //dGVEnemyShips.ColumnAdded += i.ToString();
+
+
+            }
+
+            dGVEnemyShips.ClearSelection();
+
         }
 
         Model model;
+        string[] row = { "", "", "", "", "", "", "", "", "", "" };
+        
+        int x4 = 1;
+        int x3 = 2;
+        int x2 = 3;
+        int x1 = 4;
 
         private void btnTest_Click(object sender, EventArgs e)
         {
@@ -59,9 +76,8 @@ namespace WF_Lessons_23_24
 
         private void button102_Click(object sender, EventArgs e)
         {
-            //var b = this.Controls.Find("b", true);
 
-            for (int x = 0; x < 10; x++)
+            /*for (int x = 0; x < 10; x++)
             {
                 for (int y = 0; y < 10; y++)
                 {
@@ -88,34 +104,170 @@ namespace WF_Lessons_23_24
 
                     }
                 }
+            }*/
+
+
+            for (int x = 0; x < 10; x++)
+            {
+                for (int y = 0; y < 10; y++)
+                {
+
+                    switch (model.PlayerShips[x, y])
+                    {
+                        case CoordStatus.None:
+                            dGVEnemyShips[x, y].Value = "";
+                            break;
+                        case CoordStatus.Ship:
+                            dGVEnemyShips[x, y].Value = "x";
+                            break;
+                        case CoordStatus.Got:
+                            dGVEnemyShips[x, y].Value = "k";
+                            break;
+                        case CoordStatus.Shot:
+                            dGVEnemyShips[x, y].Value = "o";
+                            break;
+                    }
+
+
+                }
             }
 
         }
 
         private void button103_Click(object sender, EventArgs e)
         {
-            Direction direction;
-            ShipType shipType = ShipType.x1;
+            int cnt = dGVEnemyShips.SelectedCells.Count;
+            if (cnt > 0)
+            {
+                if (checkBox2.Checked)
+                {
+                    int a, b;
+                    a = dGVEnemyShips.SelectedCells[0].RowIndex;
+                    b = dGVEnemyShips.SelectedCells[0].ColumnIndex;
 
-            if (checkBox1.Checked)
-                direction = Direction.Vertical;
+                    if (dGVEnemyShips.Rows[a].Cells[b].Value.ToString() == "")
+                        return;
+                }
+                if (cnt == 1)
+                    if (!checkBox2.Checked)
+                    {
+                        if (x1 == 0) return;
+                        x1--;
+                        
+                    }
+                    else
+                        x1++;
+                if (cnt == 2)
+                    if (!checkBox2.Checked)
+                    {
+                        if (x2 == 0) return;
+                        x2--;
+                        
+                    }
+                    else
+                        x2++;
+                if (cnt == 3)
+                    if (!checkBox2.Checked)
+                    {
+                        if (x3 == 0) return;
+                        x3--;
+                        
+                    }
+                    else
+                        x3++;
+                if (cnt == 4)
+                    if (!checkBox2.Checked)
+                    {
+                        if (x4 == 0) return;
+                        x4--;
+                        
+                    }
+                    else
+                        x4++;
+
+
+                for (int i = 0; i < dGVEnemyShips.SelectedCells.Count; i++)
+                {
+                    int x = dGVEnemyShips.SelectedCells[i].ColumnIndex;
+                    int y = dGVEnemyShips.SelectedCells[i].RowIndex;
+                    CoordStatus coordStatus;
+                    if (!checkBox2.Checked)
+                    {
+                        coordStatus = CoordStatus.Ship;
+                    }
+                    else
+                    {
+                        coordStatus = CoordStatus.None;
+                    }
+                    model.PlayerShips[x, y] = coordStatus;
+
+                    
+                }
+                dGVEnemyShips.ClearSelection();
+
+
+            }
             else
-                direction = Direction.Horizontal;
+            {
+                Direction direction;
+                ShipType shipType = ShipType.x1;
 
-            if (radioButton1.Checked)
-                shipType = ShipType.x1;
-            if (radioButton2.Checked)
-                shipType = ShipType.x2;
-            if (radioButton3.Checked)
-                shipType = ShipType.x3;
-            if (radioButton4.Checked)
-                shipType = ShipType.x4;
+                if (checkBox1.Checked)
+                    direction = Direction.Vertical;
+                else
+                    direction = Direction.Horizontal;
 
-            model.AddDelShip(txtBoxCoord.Text, shipType, direction, checkBox2.Checked);
+                if (radioButton1.Checked)
+                    shipType = ShipType.x1;
+                if (radioButton2.Checked)
+                    shipType = ShipType.x2;
+                if (radioButton3.Checked)
+                    shipType = ShipType.x3;
+                if (radioButton4.Checked)
+                    shipType = ShipType.x4;
 
+                model.AddDelShip(txtBoxCoord.Text, shipType, direction, checkBox2.Checked);
+
+            }
             button102_Click(sender, e);
 
+        }
 
+        private void dGVEnemyShips_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int x = dGVEnemyShips.SelectedCells[0].ColumnIndex;
+            int y = dGVEnemyShips.SelectedCells[0].RowIndex;
+
+            txtBoxCoord.Text = x.ToString() + y.ToString();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                button103.Text = "Удалить";
+            }
+            else
+            {
+                button103.Text = "Поставить";
+
+            }
+
+        }
+
+        private void dGVEnemyShips_SelectionChanged(object sender, EventArgs e)
+        {
+            int cnt = dGVEnemyShips.SelectedCells.Count;
+            txtBoxCoord.Text = cnt.ToString();
+            if( cnt > 4)
+            {
+                MessageBox.Show("Превышено количество клеток!");
+                int x = dGVEnemyShips.SelectedCells[cnt - 1].ColumnIndex;
+                int y = dGVEnemyShips.SelectedCells[0].RowIndex;
+                dGVEnemyShips.Rows[y].Cells[x].Selected = false;
+                dGVEnemyShips.ClearSelection();
+
+            }
         }
     }
 }

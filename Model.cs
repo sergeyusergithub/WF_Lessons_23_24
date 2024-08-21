@@ -147,6 +147,7 @@ namespace WF_Lessons_23_24
             {
                 x = int.Parse(LastShotCoord.Substring(0, 1));
                 y = int.Parse(LastShotCoord.Substring(1));
+
                 if (LastShot == ShotStatus.Wounded)
                 {
                     FirstShort = true;
@@ -212,10 +213,7 @@ namespace WF_Lessons_23_24
 
             }
 
-            /*if (EnemyShips[x, y] != CoordStatus.None)
-            {
-                ShotGen();
-            }*/
+           
 
             string result;
 
