@@ -201,6 +201,7 @@
             b99.TabIndex = 102;
             b99.Tag = "99";
             b99.UseVisualStyleBackColor = true;
+            b99.Click += bxx_Click;
             // 
             // b89
             // 
@@ -211,6 +212,7 @@
             b89.TabIndex = 101;
             b89.Tag = "89";
             b89.UseVisualStyleBackColor = true;
+            b89.Click += bxx_Click;
             // 
             // b79
             // 
@@ -221,6 +223,7 @@
             b79.TabIndex = 100;
             b79.Tag = "79";
             b79.UseVisualStyleBackColor = true;
+            b79.Click += bxx_Click;
             // 
             // b69
             // 
@@ -231,6 +234,7 @@
             b69.TabIndex = 99;
             b69.Tag = "69";
             b69.UseVisualStyleBackColor = true;
+            b69.Click += bxx_Click;
             // 
             // b59
             // 
@@ -241,6 +245,7 @@
             b59.TabIndex = 98;
             b59.Tag = "59";
             b59.UseVisualStyleBackColor = true;
+            b59.Click += bxx_Click;
             // 
             // b49
             // 
@@ -251,6 +256,7 @@
             b49.TabIndex = 97;
             b49.Tag = "49";
             b49.UseVisualStyleBackColor = true;
+            b49.Click += bxx_Click;
             // 
             // b39
             // 
@@ -261,6 +267,7 @@
             b39.TabIndex = 96;
             b39.Tag = "39";
             b39.UseVisualStyleBackColor = true;
+            b39.Click += bxx_Click;
             // 
             // b29
             // 
@@ -271,6 +278,7 @@
             b29.TabIndex = 95;
             b29.Tag = "29";
             b29.UseVisualStyleBackColor = true;
+            b29.Click += bxx_Click;
             // 
             // b19
             // 
@@ -281,6 +289,7 @@
             b19.TabIndex = 94;
             b19.Tag = "19";
             b19.UseVisualStyleBackColor = true;
+            b19.Click += bxx_Click;
             // 
             // b09
             // 
@@ -291,6 +300,7 @@
             b09.TabIndex = 93;
             b09.Tag = "09";
             b09.UseVisualStyleBackColor = true;
+            b09.Click += bxx_Click;
             // 
             // b00
             // 
@@ -301,6 +311,7 @@
             b00.TabIndex = 3;
             b00.Tag = "00";
             b00.UseVisualStyleBackColor = true;
+            b00.Click += bxx_Click;
             // 
             // b10
             // 
@@ -311,6 +322,7 @@
             b10.TabIndex = 4;
             b10.Tag = "10";
             b10.UseVisualStyleBackColor = true;
+            b10.Click += bxx_Click;
             // 
             // b20
             // 
@@ -321,6 +333,7 @@
             b20.TabIndex = 5;
             b20.Tag = "20";
             b20.UseVisualStyleBackColor = true;
+            b20.Click += bxx_Click;
             // 
             // b30
             // 
@@ -331,6 +344,7 @@
             b30.TabIndex = 6;
             b30.Tag = "30";
             b30.UseVisualStyleBackColor = true;
+            b30.Click += bxx_Click;
             // 
             // b40
             // 
@@ -341,6 +355,7 @@
             b40.TabIndex = 7;
             b40.Tag = "40";
             b40.UseVisualStyleBackColor = true;
+            b40.Click += bxx_Click;
             // 
             // b50
             // 
@@ -351,6 +366,7 @@
             b50.TabIndex = 8;
             b50.Tag = "50";
             b50.UseVisualStyleBackColor = true;
+            b50.Click += bxx_Click;
             // 
             // b60
             // 
@@ -361,6 +377,7 @@
             b60.TabIndex = 9;
             b60.Tag = "60";
             b60.UseVisualStyleBackColor = true;
+            b60.Click += bxx_Click;
             // 
             // b70
             // 
@@ -371,6 +388,7 @@
             b70.TabIndex = 10;
             b70.Tag = "70";
             b70.UseVisualStyleBackColor = true;
+            b70.Click += bxx_Click;
             // 
             // b80
             // 
@@ -381,6 +399,7 @@
             b80.TabIndex = 11;
             b80.Tag = "80";
             b80.UseVisualStyleBackColor = true;
+            b80.Click += bxx_Click;
             // 
             // b90
             // 
@@ -391,6 +410,7 @@
             b90.TabIndex = 12;
             b90.Tag = "90";
             b90.UseVisualStyleBackColor = true;
+            b90.Click += bxx_Click;
             // 
             // b01
             // 
@@ -401,6 +421,7 @@
             b01.TabIndex = 13;
             b01.Tag = "01";
             b01.UseVisualStyleBackColor = true;
+            b01.Click += bxx_Click;
             // 
             // b11
             // 
@@ -411,6 +432,7 @@
             b11.TabIndex = 14;
             b11.Tag = "11";
             b11.UseVisualStyleBackColor = true;
+            b11.Click += bxx_Click;
             // 
             // b21
             // 
@@ -421,6 +443,7 @@
             b21.TabIndex = 15;
             b21.Tag = "21";
             b21.UseVisualStyleBackColor = true;
+            b21.Click += bxx_Click;
             // 
             // b31
             // 
@@ -431,6 +454,7 @@
             b31.TabIndex = 16;
             b31.Tag = "31";
             b31.UseVisualStyleBackColor = true;
+            b31.Click += bxx_Click;
             // 
             // b41
             // 
@@ -441,6 +465,7 @@
             b41.TabIndex = 17;
             b41.Tag = "41";
             b41.UseVisualStyleBackColor = true;
+            b41.Click += bxx_Click;
             // 
             // b51
             // 
@@ -451,6 +476,7 @@
             b51.TabIndex = 18;
             b51.Tag = "51";
             b51.UseVisualStyleBackColor = true;
+            b51.Click += bxx_Click;
             // 
             // b61
             // 
@@ -461,6 +487,7 @@
             b61.TabIndex = 19;
             b61.Tag = "61";
             b61.UseVisualStyleBackColor = true;
+            b61.Click += bxx_Click;
             // 
             // b71
             // 
@@ -471,6 +498,7 @@
             b71.TabIndex = 20;
             b71.Tag = "71";
             b71.UseVisualStyleBackColor = true;
+            b71.Click += bxx_Click;
             // 
             // b81
             // 
@@ -481,6 +509,7 @@
             b81.TabIndex = 21;
             b81.Tag = "81";
             b81.UseVisualStyleBackColor = true;
+            b81.Click += bxx_Click;
             // 
             // b91
             // 
@@ -491,6 +520,7 @@
             b91.TabIndex = 22;
             b91.Tag = "91";
             b91.UseVisualStyleBackColor = true;
+            b91.Click += bxx_Click;
             // 
             // b02
             // 
@@ -501,6 +531,7 @@
             b02.TabIndex = 23;
             b02.Tag = "02";
             b02.UseVisualStyleBackColor = true;
+            b02.Click += bxx_Click;
             // 
             // b12
             // 
@@ -511,6 +542,7 @@
             b12.TabIndex = 24;
             b12.Tag = "12";
             b12.UseVisualStyleBackColor = true;
+            b12.Click += bxx_Click;
             // 
             // b22
             // 
@@ -521,6 +553,7 @@
             b22.TabIndex = 25;
             b22.Tag = "22";
             b22.UseVisualStyleBackColor = true;
+            b22.Click += bxx_Click;
             // 
             // b32
             // 
@@ -531,6 +564,7 @@
             b32.TabIndex = 26;
             b32.Tag = "32";
             b32.UseVisualStyleBackColor = true;
+            b32.Click += bxx_Click;
             // 
             // b42
             // 
@@ -541,6 +575,7 @@
             b42.TabIndex = 27;
             b42.Tag = "42";
             b42.UseVisualStyleBackColor = true;
+            b42.Click += bxx_Click;
             // 
             // b52
             // 
@@ -551,6 +586,7 @@
             b52.TabIndex = 28;
             b52.Tag = "52";
             b52.UseVisualStyleBackColor = true;
+            b52.Click += bxx_Click;
             // 
             // b
             // 
@@ -561,6 +597,7 @@
             b.TabIndex = 29;
             b.Tag = "62";
             b.UseVisualStyleBackColor = true;
+            b.Click += bxx_Click;
             // 
             // b72
             // 
@@ -571,6 +608,7 @@
             b72.TabIndex = 30;
             b72.Tag = "72";
             b72.UseVisualStyleBackColor = true;
+            b72.Click += bxx_Click;
             // 
             // b82
             // 
@@ -581,6 +619,7 @@
             b82.TabIndex = 31;
             b82.Tag = "82";
             b82.UseVisualStyleBackColor = true;
+            b82.Click += bxx_Click;
             // 
             // b92
             // 
@@ -591,6 +630,7 @@
             b92.TabIndex = 32;
             b92.Tag = "92";
             b92.UseVisualStyleBackColor = true;
+            b92.Click += bxx_Click;
             // 
             // b03
             // 
@@ -601,6 +641,7 @@
             b03.TabIndex = 33;
             b03.Tag = "03";
             b03.UseVisualStyleBackColor = true;
+            b03.Click += bxx_Click;
             // 
             // b13
             // 
@@ -611,6 +652,7 @@
             b13.TabIndex = 34;
             b13.Tag = "13";
             b13.UseVisualStyleBackColor = true;
+            b13.Click += bxx_Click;
             // 
             // b23
             // 
@@ -621,6 +663,7 @@
             b23.TabIndex = 35;
             b23.Tag = "23";
             b23.UseVisualStyleBackColor = true;
+            b23.Click += bxx_Click;
             // 
             // b33
             // 
@@ -631,6 +674,7 @@
             b33.TabIndex = 36;
             b33.Tag = "33";
             b33.UseVisualStyleBackColor = true;
+            b33.Click += bxx_Click;
             // 
             // b43
             // 
@@ -641,6 +685,7 @@
             b43.TabIndex = 37;
             b43.Tag = "43";
             b43.UseVisualStyleBackColor = true;
+            b43.Click += bxx_Click;
             // 
             // b53
             // 
@@ -651,6 +696,7 @@
             b53.TabIndex = 38;
             b53.Tag = "53";
             b53.UseVisualStyleBackColor = true;
+            b53.Click += bxx_Click;
             // 
             // b63
             // 
@@ -661,6 +707,7 @@
             b63.TabIndex = 39;
             b63.Tag = "63";
             b63.UseVisualStyleBackColor = true;
+            b63.Click += bxx_Click;
             // 
             // b73
             // 
@@ -671,6 +718,7 @@
             b73.TabIndex = 40;
             b73.Tag = "73";
             b73.UseVisualStyleBackColor = true;
+            b73.Click += bxx_Click;
             // 
             // b83
             // 
@@ -681,6 +729,7 @@
             b83.TabIndex = 41;
             b83.Tag = "83";
             b83.UseVisualStyleBackColor = true;
+            b83.Click += bxx_Click;
             // 
             // b93
             // 
@@ -691,6 +740,7 @@
             b93.TabIndex = 42;
             b93.Tag = "93";
             b93.UseVisualStyleBackColor = true;
+            b93.Click += bxx_Click;
             // 
             // b04
             // 
@@ -701,6 +751,7 @@
             b04.TabIndex = 43;
             b04.Tag = "04";
             b04.UseVisualStyleBackColor = true;
+            b04.Click += bxx_Click;
             // 
             // b14
             // 
@@ -711,6 +762,7 @@
             b14.TabIndex = 44;
             b14.Tag = "14";
             b14.UseVisualStyleBackColor = true;
+            b14.Click += bxx_Click;
             // 
             // b24
             // 
@@ -721,6 +773,7 @@
             b24.TabIndex = 45;
             b24.Tag = "24";
             b24.UseVisualStyleBackColor = true;
+            b24.Click += bxx_Click;
             // 
             // b34
             // 
@@ -731,6 +784,7 @@
             b34.TabIndex = 46;
             b34.Tag = "34";
             b34.UseVisualStyleBackColor = true;
+            b34.Click += bxx_Click;
             // 
             // b44
             // 
@@ -741,6 +795,7 @@
             b44.TabIndex = 47;
             b44.Tag = "44";
             b44.UseVisualStyleBackColor = true;
+            b44.Click += bxx_Click;
             // 
             // b54
             // 
@@ -751,6 +806,7 @@
             b54.TabIndex = 48;
             b54.Tag = "54";
             b54.UseVisualStyleBackColor = true;
+            b54.Click += bxx_Click;
             // 
             // b64
             // 
@@ -761,6 +817,7 @@
             b64.TabIndex = 49;
             b64.Tag = "64";
             b64.UseVisualStyleBackColor = true;
+            b64.Click += bxx_Click;
             // 
             // b74
             // 
@@ -771,6 +828,7 @@
             b74.TabIndex = 50;
             b74.Tag = "74";
             b74.UseVisualStyleBackColor = true;
+            b74.Click += bxx_Click;
             // 
             // b84
             // 
@@ -781,6 +839,7 @@
             b84.TabIndex = 51;
             b84.Tag = "84";
             b84.UseVisualStyleBackColor = true;
+            b84.Click += bxx_Click;
             // 
             // b94
             // 
@@ -791,6 +850,7 @@
             b94.TabIndex = 52;
             b94.Tag = "94";
             b94.UseVisualStyleBackColor = true;
+            b94.Click += bxx_Click;
             // 
             // b05
             // 
@@ -801,6 +861,7 @@
             b05.TabIndex = 53;
             b05.Tag = "05";
             b05.UseVisualStyleBackColor = true;
+            b05.Click += bxx_Click;
             // 
             // b15
             // 
@@ -811,6 +872,7 @@
             b15.TabIndex = 54;
             b15.Tag = "15";
             b15.UseVisualStyleBackColor = true;
+            b15.Click += bxx_Click;
             // 
             // b25
             // 
@@ -821,6 +883,7 @@
             b25.TabIndex = 55;
             b25.Tag = "25";
             b25.UseVisualStyleBackColor = true;
+            b25.Click += bxx_Click;
             // 
             // b35
             // 
@@ -831,6 +894,7 @@
             b35.TabIndex = 56;
             b35.Tag = "35";
             b35.UseVisualStyleBackColor = true;
+            b35.Click += bxx_Click;
             // 
             // b45
             // 
@@ -841,6 +905,7 @@
             b45.TabIndex = 57;
             b45.Tag = "45";
             b45.UseVisualStyleBackColor = true;
+            b45.Click += bxx_Click;
             // 
             // b55
             // 
@@ -851,6 +916,7 @@
             b55.TabIndex = 58;
             b55.Tag = "55";
             b55.UseVisualStyleBackColor = true;
+            b55.Click += bxx_Click;
             // 
             // b65
             // 
@@ -861,6 +927,7 @@
             b65.TabIndex = 59;
             b65.Tag = "65";
             b65.UseVisualStyleBackColor = true;
+            b65.Click += bxx_Click;
             // 
             // b75
             // 
@@ -871,6 +938,7 @@
             b75.TabIndex = 60;
             b75.Tag = "75";
             b75.UseVisualStyleBackColor = true;
+            b75.Click += bxx_Click;
             // 
             // b85
             // 
@@ -881,6 +949,7 @@
             b85.TabIndex = 61;
             b85.Tag = "85";
             b85.UseVisualStyleBackColor = true;
+            b85.Click += bxx_Click;
             // 
             // b95
             // 
@@ -891,6 +960,7 @@
             b95.TabIndex = 62;
             b95.Tag = "95";
             b95.UseVisualStyleBackColor = true;
+            b95.Click += bxx_Click;
             // 
             // b06
             // 
@@ -901,6 +971,7 @@
             b06.TabIndex = 63;
             b06.Tag = "06";
             b06.UseVisualStyleBackColor = true;
+            b06.Click += bxx_Click;
             // 
             // b16
             // 
@@ -911,6 +982,7 @@
             b16.TabIndex = 64;
             b16.Tag = "16";
             b16.UseVisualStyleBackColor = true;
+            b16.Click += bxx_Click;
             // 
             // b26
             // 
@@ -921,6 +993,7 @@
             b26.TabIndex = 65;
             b26.Tag = "26";
             b26.UseVisualStyleBackColor = true;
+            b26.Click += bxx_Click;
             // 
             // b36
             // 
@@ -931,6 +1004,7 @@
             b36.TabIndex = 66;
             b36.Tag = "36";
             b36.UseVisualStyleBackColor = true;
+            b36.Click += bxx_Click;
             // 
             // b46
             // 
@@ -941,6 +1015,7 @@
             b46.TabIndex = 67;
             b46.Tag = "46";
             b46.UseVisualStyleBackColor = true;
+            b46.Click += bxx_Click;
             // 
             // b56
             // 
@@ -951,6 +1026,7 @@
             b56.TabIndex = 68;
             b56.Tag = "56";
             b56.UseVisualStyleBackColor = true;
+            b56.Click += bxx_Click;
             // 
             // b66
             // 
@@ -961,6 +1037,7 @@
             b66.TabIndex = 69;
             b66.Tag = "66";
             b66.UseVisualStyleBackColor = true;
+            b66.Click += bxx_Click;
             // 
             // b76
             // 
@@ -971,6 +1048,7 @@
             b76.TabIndex = 70;
             b76.Tag = "76";
             b76.UseVisualStyleBackColor = true;
+            b76.Click += bxx_Click;
             // 
             // b86
             // 
@@ -981,6 +1059,7 @@
             b86.TabIndex = 71;
             b86.Tag = "86";
             b86.UseVisualStyleBackColor = true;
+            b86.Click += bxx_Click;
             // 
             // b96
             // 
@@ -991,6 +1070,7 @@
             b96.TabIndex = 72;
             b96.Tag = "96";
             b96.UseVisualStyleBackColor = true;
+            b96.Click += bxx_Click;
             // 
             // b07
             // 
@@ -1001,6 +1081,7 @@
             b07.TabIndex = 73;
             b07.Tag = "07";
             b07.UseVisualStyleBackColor = true;
+            b07.Click += bxx_Click;
             // 
             // b17
             // 
@@ -1011,6 +1092,7 @@
             b17.TabIndex = 74;
             b17.Tag = "17";
             b17.UseVisualStyleBackColor = true;
+            b17.Click += bxx_Click;
             // 
             // b27
             // 
@@ -1021,6 +1103,7 @@
             b27.TabIndex = 75;
             b27.Tag = "27";
             b27.UseVisualStyleBackColor = true;
+            b27.Click += bxx_Click;
             // 
             // b37
             // 
@@ -1031,6 +1114,7 @@
             b37.TabIndex = 76;
             b37.Tag = "37";
             b37.UseVisualStyleBackColor = true;
+            b37.Click += bxx_Click;
             // 
             // b47
             // 
@@ -1041,6 +1125,7 @@
             b47.TabIndex = 77;
             b47.Tag = "47";
             b47.UseVisualStyleBackColor = true;
+            b47.Click += bxx_Click;
             // 
             // b57
             // 
@@ -1051,6 +1136,7 @@
             b57.TabIndex = 78;
             b57.Tag = "57";
             b57.UseVisualStyleBackColor = true;
+            b57.Click += bxx_Click;
             // 
             // b67
             // 
@@ -1061,6 +1147,7 @@
             b67.TabIndex = 79;
             b67.Tag = "67";
             b67.UseVisualStyleBackColor = true;
+            b67.Click += bxx_Click;
             // 
             // b77
             // 
@@ -1071,6 +1158,7 @@
             b77.TabIndex = 80;
             b77.Tag = "77";
             b77.UseVisualStyleBackColor = true;
+            b77.Click += bxx_Click;
             // 
             // b87
             // 
@@ -1081,6 +1169,7 @@
             b87.TabIndex = 81;
             b87.Tag = "87";
             b87.UseVisualStyleBackColor = true;
+            b87.Click += bxx_Click;
             // 
             // b97
             // 
@@ -1091,6 +1180,7 @@
             b97.TabIndex = 82;
             b97.Tag = "97";
             b97.UseVisualStyleBackColor = true;
+            b97.Click += bxx_Click;
             // 
             // b08
             // 
@@ -1101,6 +1191,7 @@
             b08.TabIndex = 83;
             b08.Tag = "08";
             b08.UseVisualStyleBackColor = true;
+            b08.Click += bxx_Click;
             // 
             // b18
             // 
@@ -1111,6 +1202,7 @@
             b18.TabIndex = 84;
             b18.Tag = "18";
             b18.UseVisualStyleBackColor = true;
+            b18.Click += bxx_Click;
             // 
             // b28
             // 
@@ -1121,6 +1213,7 @@
             b28.TabIndex = 85;
             b28.Tag = "28";
             b28.UseVisualStyleBackColor = true;
+            b28.Click += bxx_Click;
             // 
             // b38
             // 
@@ -1131,6 +1224,7 @@
             b38.TabIndex = 86;
             b38.Tag = "38";
             b38.UseVisualStyleBackColor = true;
+            b38.Click += bxx_Click;
             // 
             // b48
             // 
@@ -1141,6 +1235,7 @@
             b48.TabIndex = 87;
             b48.Tag = "48";
             b48.UseVisualStyleBackColor = true;
+            b48.Click += bxx_Click;
             // 
             // b58
             // 
@@ -1151,6 +1246,7 @@
             b58.TabIndex = 88;
             b58.Tag = "58";
             b58.UseVisualStyleBackColor = true;
+            b58.Click += bxx_Click;
             // 
             // b68
             // 
@@ -1161,6 +1257,7 @@
             b68.TabIndex = 89;
             b68.Tag = "68";
             b68.UseVisualStyleBackColor = true;
+            b68.Click += bxx_Click;
             // 
             // b78
             // 
@@ -1171,6 +1268,7 @@
             b78.TabIndex = 90;
             b78.Tag = "78";
             b78.UseVisualStyleBackColor = true;
+            b78.Click += bxx_Click;
             // 
             // b88
             // 
@@ -1181,6 +1279,7 @@
             b88.TabIndex = 91;
             b88.Tag = "88";
             b88.UseVisualStyleBackColor = true;
+            b88.Click += bxx_Click;
             // 
             // b98
             // 
@@ -1191,6 +1290,7 @@
             b98.TabIndex = 92;
             b98.Tag = "98";
             b98.UseVisualStyleBackColor = true;
+            b98.Click += bxx_Click;
             // 
             // panel1
             // 

@@ -27,7 +27,7 @@ namespace WF_Lessons_23_24
 
         Model model;
         string[] row = { "", "", "", "", "", "", "", "", "", "" };
-        
+
         int x4 = 1;
         int x3 = 2;
         int x2 = 3;
@@ -155,7 +155,7 @@ namespace WF_Lessons_23_24
                     {
                         if (x1 == 0) return;
                         x1--;
-                        
+
                     }
                     else
                         x1++;
@@ -164,7 +164,7 @@ namespace WF_Lessons_23_24
                     {
                         if (x2 == 0) return;
                         x2--;
-                        
+
                     }
                     else
                         x2++;
@@ -173,7 +173,7 @@ namespace WF_Lessons_23_24
                     {
                         if (x3 == 0) return;
                         x3--;
-                        
+
                     }
                     else
                         x3++;
@@ -182,7 +182,7 @@ namespace WF_Lessons_23_24
                     {
                         if (x4 == 0) return;
                         x4--;
-                        
+
                     }
                     else
                         x4++;
@@ -203,7 +203,7 @@ namespace WF_Lessons_23_24
                     }
                     model.PlayerShips[x, y] = coordStatus;
 
-                    
+
                 }
                 dGVEnemyShips.ClearSelection();
 
@@ -261,7 +261,7 @@ namespace WF_Lessons_23_24
         {
             int cnt = dGVEnemyShips.SelectedCells.Count;
             txtBoxCoord.Text = cnt.ToString();
-            if( cnt > 4)
+            if (cnt > 4)
             {
                 MessageBox.Show("Превышено количество клеток!");
                 int x = dGVEnemyShips.SelectedCells[cnt - 1].ColumnIndex;
@@ -270,6 +270,15 @@ namespace WF_Lessons_23_24
                 dGVEnemyShips.ClearSelection();
 
             }
+        }
+
+        int btn_click_count = 0;
+
+        private void bxx_Click(object sender, EventArgs e)
+        {
+            btn_click_count++;
+            txtBoxCoord.Text = (sender as Button).Tag.ToString(); //"click" + btn_click_count.ToString();
+
         }
     }
 }
