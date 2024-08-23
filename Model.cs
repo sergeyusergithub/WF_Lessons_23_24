@@ -63,6 +63,9 @@ namespace WF_Lessons_23_24
         // Поле статуса первого выстрела
         bool FirstShort;
 
+        // Поле количество попаданий по кораблю
+        int WoundedCount = 1;
+
         // Поле координат последнего выстрела
         public string? LastShotCoord;
 
@@ -136,9 +139,13 @@ namespace WF_Lessons_23_24
             int x, y; // координаты выстрела в цифровом виде
 
             Random rand = new Random();
+            int q = rand.Next(1, 4);
 
-            if (LastShot == ShotStatus.Kill) WoundedStatus = false;
-
+            if (LastShot == ShotStatus.Kill)
+            {
+                WoundedStatus = false;
+                WoundedCount = 0;
+            }
             if ((LastShot == ShotStatus.Kill || LastShot == ShotStatus.Miss) && !WoundedStatus)
             {
                 x = rand.Next(0, 9);
@@ -148,41 +155,49 @@ namespace WF_Lessons_23_24
                 x = int.Parse(LastShotCoord.Substring(0, 1));
                 y = int.Parse(LastShotCoord.Substring(1));
 
-                if (LastShot == ShotStatus.Wounded)
+                if (LastShot == ShotStatus.Wounded || FirstShort)
                 {
                     FirstShort = true;
 
-                    if (x != 9 && EnemyShips[x + 1, y] == CoordStatus.Got)
+                    if (x < 9 && EnemyShips[x + 1, y] == CoordStatus.Got)
                     { x = x - 1; FirstShort = false; }
-                    if (y != 9 && EnemyShips[x, y + 1] == CoordStatus.Got)
+                    if (y < 9 && EnemyShips[x, y + 1] == CoordStatus.Got)
                     { y = y - 1; FirstShort = false; }
-                    if (x != 0 && EnemyShips[x - 1, y] == CoordStatus.Got)
+                    if (x > 0 && EnemyShips[x - 1, y] == CoordStatus.Got)
                     { x = x + 1; FirstShort = false; }
-                    if (y != 0 && EnemyShips[x, y - 1] == CoordStatus.Got)
+                    if (y > 0 && EnemyShips[x, y - 1] == CoordStatus.Got)
                     { y = y + 1; FirstShort = false; }
 
+                    if (!FirstShort)
+                    {
+                        WoundedCount++;
+                    }
 
                     if (FirstShort)
                     {
-                        int q = rand.Next(1, 4);
+                        
                         switch (q)
                         {
                             case 1:
                                 x = x + 1;
+                                if (x > 9) x = x - 1;
                                 break;
                             case 2:
                                 x = x - 1;
+                                if (x < 0) x = x + 1;
                                 break;
                             case 3:
                                 y = y + 1;
+                                if (y > 9) y = y - 1;
                                 break;
                             case 4:
                                 y = y - 1;
+                                if (y < 0) y = y + 1;
                                 break;
                         }
                     }
                 }
-                if (LastShot == ShotStatus.Miss && WoundedStatus)
+                if (LastShot == ShotStatus.Miss && WoundedStatus && !FirstShort)
                 {
                     if (x < 8 && EnemyShips[x + 2, y] == CoordStatus.Got) x = x + 3;
                     else

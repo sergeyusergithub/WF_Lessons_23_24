@@ -54,6 +54,8 @@ namespace WF_Lessons_23_24
                 model.WoundedStatus = true;
             }
             MessageBox.Show(model.LastShot.ToString());
+            button102_Click(sender, e);
+
 
         }
 
@@ -77,7 +79,7 @@ namespace WF_Lessons_23_24
         private void button102_Click(object sender, EventArgs e)
         {
 
-            /*for (int x = 0; x < 10; x++)
+            for (int x = 0; x < 10; x++)
             {
                 for (int y = 0; y < 10; y++)
                 {
@@ -95,7 +97,7 @@ namespace WF_Lessons_23_24
                                 btn.Text = "x";
                                 break;
                             case CoordStatus.Got:
-                                btn.Text = "k";
+                                btn.Text = "w";
                                 break;
                             case CoordStatus.Shot:
                                 btn.Text = "o";
@@ -104,7 +106,7 @@ namespace WF_Lessons_23_24
 
                     }
                 }
-            }*/
+            }
 
 
             for (int x = 0; x < 10; x++)
@@ -112,7 +114,7 @@ namespace WF_Lessons_23_24
                 for (int y = 0; y < 10; y++)
                 {
 
-                    switch (model.PlayerShips[x, y])
+                    switch (model.EnemyShips[x, y])
                     {
                         case CoordStatus.None:
                             dGVEnemyShips[x, y].Value = "";
@@ -121,7 +123,7 @@ namespace WF_Lessons_23_24
                             dGVEnemyShips[x, y].Value = "x";
                             break;
                         case CoordStatus.Got:
-                            dGVEnemyShips[x, y].Value = "k";
+                            dGVEnemyShips[x, y].Value = "w";
                             break;
                         case CoordStatus.Shot:
                             dGVEnemyShips[x, y].Value = "o";
